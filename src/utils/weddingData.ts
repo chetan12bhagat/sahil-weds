@@ -58,8 +58,13 @@ export function getTimeRemaining() {
 }
 
 export function shareOnWhatsApp() {
+  const url =
+    typeof window !== 'undefined' && window.location.origin !== 'null'
+      ? window.location.href
+      : 'https://chetan12bhagat.github.io/sahil-weds/';
+
   const text = encodeURIComponent(
-    `॥ Shri Gajanan Prasanna ॥\n\nYou are cordially invited to the Wedding Ceremony (Shubh Vivah Sohala) of Abhijeet & Sakshi!\n\n📅 Saturday, 5 December 2026 | 12:04 PM (Abhijit Muhurat)\n📍 Imperial Garden, Patansawangi, Nagpur\n\n"${WEDDING_INFO.invitationMessage}"\n\nWith Best Compliments:\n${WEDDING_INFO.invitationFrom}\nAbhijeet & Sakshi`
+    `॥ Shri Gajanan Prasanna ॥\n\nYou are cordially invited to the Wedding Ceremony (Shubh Vivah Sohala) of Abhijeet & Sakshi!\n\n📅 Saturday, 5 December 2026 | 12:04 PM (Abhijit Muhurat)\n📍 Imperial Garden, Patansawangi, Nagpur\n\n"${WEDDING_INFO.invitationMessage}"\n\n🔗 Wedding Invitation & Venue Link:\n${url}\n\nWith Best Compliments:\n${WEDDING_INFO.invitationFrom}\nAbhijeet & Sakshi`
   );
   window.open(`https://wa.me/?text=${text}`, '_blank');
 }
