@@ -357,15 +357,6 @@ const HeroInvitation: React.FC = () => {
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
       >
-        {/* Start Image Logo */}
-        <motion.div variants={itemVariants} className="mb-4">
-          <img
-            src="/custom-websites/sujith-weds-pratiksha/assets/Intro/sahilstartimage.jpeg"
-            alt="Wedding Logo"
-            className="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-full border-2 border-gold shadow-[0_0_25px_rgba(212,165,71,0.4)] mx-auto"
-          />
-        </motion.div>
-
         {/* Lotus icon */}
         <motion.div variants={itemVariants}>
           <LotusIcon className="w-10 h-auto text-gold mb-3" />
